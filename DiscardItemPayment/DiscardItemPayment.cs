@@ -40,7 +40,7 @@ namespace DiscardItemPayment
                 //InformationManager.DisplayMessage(new InformationMessage($"乘数: {priceMultiplier}\n"));
                 //InformationManager.DisplayMessage(new InformationMessage($"价值: {value}\n"));
                 totalNum += roster[i].Amount;
-                gold += (int)(value * roster[i].Amount * Multiplier);
+                gold += (int)(value * priceMultiplier * roster[i].Amount * Multiplier);
             }
             Hero.MainHero.ChangeHeroGold(gold);
             if (totalNum > 0)
